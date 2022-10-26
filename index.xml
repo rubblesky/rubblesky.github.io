@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>瓦砾与天空</title>
-    <link>http://rubsky.top/</link>
+    <link>https://rubsky.top/</link>
     <description>Recent content on 瓦砾与天空</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 25 Oct 2022 22:23:20 +0800</lastBuildDate><atom:link href="http://rubsky.top/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 25 Oct 2022 22:23:20 +0800</lastBuildDate><atom:link href="https://rubsky.top/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>First</title>
-      <link>http://rubsky.top/post/first/</link>
+      <link>https://rubsky.top/post/first/</link>
       <pubDate>Tue, 25 Oct 2022 22:23:20 +0800</pubDate>
       
-      <guid>http://rubsky.top/post/first/</guid>
+      <guid>https://rubsky.top/post/first/</guid>
       <description></description>
     </item>
     
