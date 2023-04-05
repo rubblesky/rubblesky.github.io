@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Markdown使用手册 这种东西应该最先写，免得每次写博客还要查markdown的相关文档。发表不发表看心情了，不过这只是一个手册，没办法代替教程。页面布局规范将来可能也会记录在这里。
+标题语法 标题就是用#标记，最多有六级，一个#最大，六个#最小，记得后面加一个空格。
+段落语法 要创建段落，请使用空白行将一行或多行文本进行分隔。
+段落语法 如果不想分段，只想换行，在一行的末尾添加两个或多个空格，然后按回车键,即可创建一个换行。
+如果觉得空格不明显，还可以用&amp;lt;br&amp;gt;显式换行，这样就不需要回车了。
+转义字符 这个提前写，转义字符就是斜杠\，比如上面的&amp;lt;br&amp;gt;，可以写成\&amp;lt;br&amp;gt;这样就不会被markdown识别成换行了，
+好像还有其他用法用的再说
+强调语法 加粗用两个星号包围加粗部分（左右各有两个），例如：加粗，实际写法是**加粗**,转义时每个*都需要\修饰。
+引用语法 要创建块引用，请在段落前添加一个 &amp;gt; 符号。例如
+这是引用部分
+块引用可以包含多个段落。为段落之间的空白行添加一个 &amp;gt; 符号。
+实际写法是
+&amp;gt; 这是引用部分
+&amp;gt;
+&amp;gt; 块引用可以包含多个段落。为段落之间的空白行添加一个 &amp;gt; 符号。
+块引用可以嵌套。在要嵌套的段落前添加一个 &amp;raquo; 符号（需要嵌套多少层就写多少&amp;gt;）。
+列表语法 要创建有序列表，请在每个列表项前添加数字并紧跟一个英文句点。数字不必按数学顺序排列，但是列表应当以数字 1 起始。
+要创建无序列表，请在每个列表项前面添加破折号 (-)、星号 (*) 或加号 (&#43;) 。缩进一个或多个列表项可创建嵌套列表。
+代码语法 要将单词或短语表示为代码，请将其包裹在反引号 (`) 中。
+如果你要表示为代码的单词或短语中包含一个或多个反引号，则可以通过将单词或短语包裹在双反引号(``)中。
+上面是创建短语代码，如果要创建代码块，使用围栏式代码块（fenced code blocks）
+根据Markdown处理器或编辑器的不同，您将在代码块之前和之后的行上使用三个反引号（```）或三个波浪号（~~~）。
+许多Markdown处理器都支持受围栏代码块的语法突出显示。使用此功能，您可以为编写代码的任何语言添加颜色突出显示。要添加语法突出显示，请在受防护的代码块之前的反引号旁边指定一种语言。例如
+{ &amp;#34;firstName&amp;#34;: &amp;#34;John&amp;#34;, &amp;#34;lastName&amp;#34;: &amp;#34;Smith&amp;#34;, &amp;#34;age&amp;#34;: 25 } 实际写法为
+```json { &amp;quot;firstName&amp;quot;: &amp;quot;John&amp;quot;, &amp;quot;lastName&amp;quot;: &amp;quot;Smith&amp;quot;, &amp;quot;age&amp;quot;: 25 } ``` 分隔线语法 要创建分隔线，请在单独一行上使用三个破折号 (&amp;mdash;) 并且不能包含其他内容。'>
+<title>Markdown使用手册</title>
+
+<link rel='canonical' href='https://rubsky.top/markdown%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/'>
+
+<link rel="stylesheet" href="/scss/style.min.711787006ce766a1813dd794147899ff920bd0c64d42fbc94a978bb6e117ca65.css"><meta property='og:title' content='Markdown使用手册'>
+<meta property='og:description' content='Markdown使用手册 这种东西应该最先写，免得每次写博客还要查markdown的相关文档。发表不发表看心情了，不过这只是一个手册，没办法代替教程。页面布局规范将来可能也会记录在这里。
+标题语法 标题就是用#标记，最多有六级，一个#最大，六个#最小，记得后面加一个空格。
+段落语法 要创建段落，请使用空白行将一行或多行文本进行分隔。
+段落语法 如果不想分段，只想换行，在一行的末尾添加两个或多个空格，然后按回车键,即可创建一个换行。
+如果觉得空格不明显，还可以用&amp;lt;br&amp;gt;显式换行，这样就不需要回车了。
+转义字符 这个提前写，转义字符就是斜杠\，比如上面的&amp;lt;br&amp;gt;，可以写成\&amp;lt;br&amp;gt;这样就不会被markdown识别成换行了，
+好像还有其他用法用的再说
+强调语法 加粗用两个星号包围加粗部分（左右各有两个），例如：加粗，实际写法是**加粗**,转义时每个*都需要\修饰。
+引用语法 要创建块引用，请在段落前添加一个 &amp;gt; 符号。例如
+这是引用部分
+块引用可以包含多个段落。为段落之间的空白行添加一个 &amp;gt; 符号。
+实际写法是
+&amp;gt; 这是引用部分
+&amp;gt;
+&amp;gt; 块引用可以包含多个段落。为段落之间的空白行添加一个 &amp;gt; 符号。
+块引用可以嵌套。在要嵌套的段落前添加一个 &amp;raquo; 符号（需要嵌套多少层就写多少&amp;gt;）。
+列表语法 要创建有序列表，请在每个列表项前添加数字并紧跟一个英文句点。数字不必按数学顺序排列，但是列表应当以数字 1 起始。
+要创建无序列表，请在每个列表项前面添加破折号 (-)、星号 (*) 或加号 (&#43;) 。缩进一个或多个列表项可创建嵌套列表。
+代码语法 要将单词或短语表示为代码，请将其包裹在反引号 (`) 中。
+如果你要表示为代码的单词或短语中包含一个或多个反引号，则可以通过将单词或短语包裹在双反引号(``)中。
+上面是创建短语代码，如果要创建代码块，使用围栏式代码块（fenced code blocks）
+根据Markdown处理器或编辑器的不同，您将在代码块之前和之后的行上使用三个反引号（```）或三个波浪号（~~~）。
+许多Markdown处理器都支持受围栏代码块的语法突出显示。使用此功能，您可以为编写代码的任何语言添加颜色突出显示。要添加语法突出显示，请在受防护的代码块之前的反引号旁边指定一种语言。例如
+{ &amp;#34;firstName&amp;#34;: &amp;#34;John&amp;#34;, &amp;#34;lastName&amp;#34;: &amp;#34;Smith&amp;#34;, &amp;#34;age&amp;#34;: 25 } 实际写法为
+```json { &amp;quot;firstName&amp;quot;: &amp;quot;John&amp;quot;, &amp;quot;lastName&amp;quot;: &amp;quot;Smith&amp;quot;, &amp;quot;age&amp;quot;: 25 } ``` 分隔线语法 要创建分隔线，请在单独一行上使用三个破折号 (&amp;mdash;) 并且不能包含其他内容。'>
+<meta property='og:url' content='https://rubsky.top/markdown%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/'>
+<meta property='og:site_name' content='瓦砾与天空'>
+<meta property='og:type' content='article'><meta property='article:section' content='' /><meta property='article:published_time' content='2023-04-05T18:22:04&#43;08:00'/><meta property='article:modified_time' content='2023-04-05T18:22:04&#43;08:00'/>
+<meta name="twitter:title" content="Markdown使用手册">
+<meta name="twitter:description" content="Markdown使用手册 这种东西应该最先写，免得每次写博客还要查markdown的相关文档。发表不发表看心情了，不过这只是一个手册，没办法代替教程。页面布局规范将来可能也会记录在这里。
+标题语法 标题就是用#标记，最多有六级，一个#最大，六个#最小，记得后面加一个空格。
+段落语法 要创建段落，请使用空白行将一行或多行文本进行分隔。
+段落语法 如果不想分段，只想换行，在一行的末尾添加两个或多个空格，然后按回车键,即可创建一个换行。
+如果觉得空格不明显，还可以用&amp;lt;br&amp;gt;显式换行，这样就不需要回车了。
+转义字符 这个提前写，转义字符就是斜杠\，比如上面的&amp;lt;br&amp;gt;，可以写成\&amp;lt;br&amp;gt;这样就不会被markdown识别成换行了，
+好像还有其他用法用的再说
+强调语法 加粗用两个星号包围加粗部分（左右各有两个），例如：加粗，实际写法是**加粗**,转义时每个*都需要\修饰。
+引用语法 要创建块引用，请在段落前添加一个 &amp;gt; 符号。例如
+这是引用部分
+块引用可以包含多个段落。为段落之间的空白行添加一个 &amp;gt; 符号。
+实际写法是
+&amp;gt; 这是引用部分
+&amp;gt;
+&amp;gt; 块引用可以包含多个段落。为段落之间的空白行添加一个 &amp;gt; 符号。
+块引用可以嵌套。在要嵌套的段落前添加一个 &amp;raquo; 符号（需要嵌套多少层就写多少&amp;gt;）。
+列表语法 要创建有序列表，请在每个列表项前添加数字并紧跟一个英文句点。数字不必按数学顺序排列，但是列表应当以数字 1 起始。
+要创建无序列表，请在每个列表项前面添加破折号 (-)、星号 (*) 或加号 (&#43;) 。缩进一个或多个列表项可创建嵌套列表。
+代码语法 要将单词或短语表示为代码，请将其包裹在反引号 (`) 中。
+如果你要表示为代码的单词或短语中包含一个或多个反引号，则可以通过将单词或短语包裹在双反引号(``)中。
+上面是创建短语代码，如果要创建代码块，使用围栏式代码块（fenced code blocks）
+根据Markdown处理器或编辑器的不同，您将在代码块之前和之后的行上使用三个反引号（```）或三个波浪号（~~~）。
+许多Markdown处理器都支持受围栏代码块的语法突出显示。使用此功能，您可以为编写代码的任何语言添加颜色突出显示。要添加语法突出显示，请在受防护的代码块之前的反引号旁边指定一种语言。例如
+{ &amp;#34;firstName&amp;#34;: &amp;#34;John&amp;#34;, &amp;#34;lastName&amp;#34;: &amp;#34;Smith&amp;#34;, &amp;#34;age&amp;#34;: 25 } 实际写法为
+```json { &amp;quot;firstName&amp;quot;: &amp;quot;John&amp;quot;, &amp;quot;lastName&amp;quot;: &amp;quot;Smith&amp;quot;, &amp;quot;age&amp;quot;: 25 } ``` 分隔线语法 要创建分隔线，请在单独一行上使用三个破折号 (&amp;mdash;) 并且不能包含其他内容。">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hue06b2002671054dff8b014a033dd9922_1727043_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">瓦砾与天空</a></h1>
+            <h2 class="site-description"></h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/markdown%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/">Markdown使用手册</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Apr 05, 2023</time>
+            </div>
+        
+
+    
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    1 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="markdown使用手册">Markdown使用手册</h1>
+<p>这种东西应该最先写，免得每次写博客还要查markdown的相关文档。发表不发表看心情了，不过这只是一个手册，没办法代替教程。页面布局规范将来可能也会记录在这里。</p>
+<h2 id="标题语法">标题语法</h2>
+<p>标题就是用#标记，最多有六级，一个#最大，六个#最小，记得后面加一个空格。</p>
+<h2 id="段落语法">段落语法</h2>
+<p>要创建段落，请使用空白行将一行或多行文本进行分隔。</p>
+<h2 id="段落语法-1">段落语法</h2>
+<p>如果不想分段，只想换行，在一行的末尾添加两个或多个空格，然后按回车键,即可创建一个换行。<br>
+如果觉得空格不明显，还可以用&lt;br&gt;显式换行，这样就不需要回车了。</p>
+<h2 id="转义字符">转义字符</h2>
+<p>这个提前写，转义字符就是斜杠\，比如上面的&lt;br&gt;，可以写成\&lt;br&gt;这样就不会被markdown识别成换行了，<br>
+好像还有其他用法用的再说</p>
+<h2 id="强调语法">强调语法</h2>
+<p>加粗用两个星号包围加粗部分（左右各有两个），例如：<strong>加粗</strong>，实际写法是**加粗**,转义时每个*都需要\修饰。</p>
+<h2 id="引用语法">引用语法</h2>
+<p>要创建块引用，请在段落前添加一个 &gt; 符号。例如</p>
+<blockquote>
+<p>这是引用部分</p>
+<p>块引用可以包含多个段落。为段落之间的空白行添加一个 &gt; 符号。</p>
+</blockquote>
+<p>实际写法是</p>
+<blockquote>
+<p>&gt; 这是引用部分</p>
+<p>&gt;</p>
+<p>&gt; 块引用可以包含多个段落。为段落之间的空白行添加一个 &gt; 符号。</p>
+</blockquote>
+<p>块引用可以嵌套。在要嵌套的段落前添加一个 &raquo; 符号（需要嵌套多少层就写多少&gt;）。</p>
+<h2 id="列表语法">列表语法</h2>
+<p>要创建有序列表，请在每个列表项前添加数字并紧跟一个英文句点。数字不必按数学顺序排列，但是列表应当以数字 1 起始。<br>
+要创建无序列表，请在每个列表项前面添加破折号 (-)、星号 (*) 或加号 (+) 。<strong>缩进一个或多个列表项可创建嵌套列表。</strong></p>
+<h2 id="代码语法">代码语法</h2>
+<p>要将单词或短语表示为代码，请将其包裹在反引号 (`) 中。<br>
+如果你要表示为代码的单词或短语中包含一个或多个反引号，则可以通过将单词或短语包裹在双反引号(``)中。</p>
+<p>上面是创建短语代码，如果要创建代码块，使用围栏式代码块（fenced code blocks）<br>
+根据Markdown处理器或编辑器的不同，您将在代码块之前和之后的行上使用三个反引号（```）或三个波浪号（~~~）。<br>
+许多Markdown处理器都支持受围栏代码块的语法突出显示。使用此功能，您可以为编写代码的任何语言添加颜色突出显示。要添加语法突出显示，请在受防护的代码块之前的反引号旁边指定一种语言。例如</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;firstName&#34;</span>: <span style="color:#e6db74">&#34;John&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;lastName&#34;</span>: <span style="color:#e6db74">&#34;Smith&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;age&#34;</span>: <span style="color:#ae81ff">25</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>实际写法为</p>
+<pre><code>```json
+{
+&quot;firstName&quot;: &quot;John&quot;,
+&quot;lastName&quot;: &quot;Smith&quot;,
+&quot;age&quot;: 25
+}
+```
+</code></pre>
+<h2 id="分隔线语法">分隔线语法</h2>
+<p>要创建分隔线，请在单独一行上使用三个破折号 (&mdash;) 并且不能包含其他内容。</p>
+<hr>
+<p>后面还有链接和图片语法，暂时用不到，未完待续。</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2023 瓦砾与天空
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.15.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

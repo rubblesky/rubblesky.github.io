@@ -7,6 +7,68 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-CN</language>
         <lastBuildDate>Tue, 28 Mar 2023 23:28:30 +0800</lastBuildDate><atom:link href="https://rubsky.top/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Markdown使用手册</title>
+        <link>https://rubsky.top/markdown%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/</link>
+        <pubDate>Wed, 05 Apr 2023 18:22:04 +0800</pubDate>
+        
+        <guid>https://rubsky.top/markdown%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/</guid>
+        <description>&lt;h1 id=&#34;markdown使用手册&#34;&gt;Markdown使用手册&lt;/h1&gt;
+&lt;p&gt;这种东西应该最先写，免得每次写博客还要查markdown的相关文档。发表不发表看心情了，不过这只是一个手册，没办法代替教程。页面布局规范将来可能也会记录在这里。&lt;/p&gt;
+&lt;h2 id=&#34;标题语法&#34;&gt;标题语法&lt;/h2&gt;
+&lt;p&gt;标题就是用#标记，最多有六级，一个#最大，六个#最小，记得后面加一个空格。&lt;/p&gt;
+&lt;h2 id=&#34;段落语法&#34;&gt;段落语法&lt;/h2&gt;
+&lt;p&gt;要创建段落，请使用空白行将一行或多行文本进行分隔。&lt;/p&gt;
+&lt;h2 id=&#34;段落语法-1&#34;&gt;段落语法&lt;/h2&gt;
+&lt;p&gt;如果不想分段，只想换行，在一行的末尾添加两个或多个空格，然后按回车键,即可创建一个换行。&lt;br&gt;
+如果觉得空格不明显，还可以用&amp;lt;br&amp;gt;显式换行，这样就不需要回车了。&lt;/p&gt;
+&lt;h2 id=&#34;转义字符&#34;&gt;转义字符&lt;/h2&gt;
+&lt;p&gt;这个提前写，转义字符就是斜杠\，比如上面的&amp;lt;br&amp;gt;，可以写成\&amp;lt;br&amp;gt;这样就不会被markdown识别成换行了，&lt;br&gt;
+好像还有其他用法用的再说&lt;/p&gt;
+&lt;h2 id=&#34;强调语法&#34;&gt;强调语法&lt;/h2&gt;
+&lt;p&gt;加粗用两个星号包围加粗部分（左右各有两个），例如：&lt;strong&gt;加粗&lt;/strong&gt;，实际写法是**加粗**,转义时每个*都需要\修饰。&lt;/p&gt;
+&lt;h2 id=&#34;引用语法&#34;&gt;引用语法&lt;/h2&gt;
+&lt;p&gt;要创建块引用，请在段落前添加一个 &amp;gt; 符号。例如&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这是引用部分&lt;/p&gt;
+&lt;p&gt;块引用可以包含多个段落。为段落之间的空白行添加一个 &amp;gt; 符号。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;实际写法是&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;gt; 这是引用部分&lt;/p&gt;
+&lt;p&gt;&amp;gt;&lt;/p&gt;
+&lt;p&gt;&amp;gt; 块引用可以包含多个段落。为段落之间的空白行添加一个 &amp;gt; 符号。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;块引用可以嵌套。在要嵌套的段落前添加一个 &amp;raquo; 符号（需要嵌套多少层就写多少&amp;gt;）。&lt;/p&gt;
+&lt;h2 id=&#34;列表语法&#34;&gt;列表语法&lt;/h2&gt;
+&lt;p&gt;要创建有序列表，请在每个列表项前添加数字并紧跟一个英文句点。数字不必按数学顺序排列，但是列表应当以数字 1 起始。&lt;br&gt;
+要创建无序列表，请在每个列表项前面添加破折号 (-)、星号 (*) 或加号 (+) 。&lt;strong&gt;缩进一个或多个列表项可创建嵌套列表。&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;代码语法&#34;&gt;代码语法&lt;/h2&gt;
+&lt;p&gt;要将单词或短语表示为代码，请将其包裹在反引号 (`) 中。&lt;br&gt;
+如果你要表示为代码的单词或短语中包含一个或多个反引号，则可以通过将单词或短语包裹在双反引号(``)中。&lt;/p&gt;
+&lt;p&gt;上面是创建短语代码，如果要创建代码块，使用围栏式代码块（fenced code blocks）&lt;br&gt;
+根据Markdown处理器或编辑器的不同，您将在代码块之前和之后的行上使用三个反引号（```）或三个波浪号（~~~）。&lt;br&gt;
+许多Markdown处理器都支持受围栏代码块的语法突出显示。使用此功能，您可以为编写代码的任何语言添加颜色突出显示。要添加语法突出显示，请在受防护的代码块之前的反引号旁边指定一种语言。例如&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;firstName&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;John&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;lastName&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Smith&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;age&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;25&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;实际写法为&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```json
+{
+&amp;quot;firstName&amp;quot;: &amp;quot;John&amp;quot;,
+&amp;quot;lastName&amp;quot;: &amp;quot;Smith&amp;quot;,
+&amp;quot;age&amp;quot;: 25
+}
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;分隔线语法&#34;&gt;分隔线语法&lt;/h2&gt;
+&lt;p&gt;要创建分隔线，请在单独一行上使用三个破折号 (&amp;mdash;) 并且不能包含其他内容。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;后面还有链接和图片语法，暂时用不到，未完待续。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>博客重新开张了</title>
         <link>https://rubsky.top/post/%E5%8D%9A%E5%AE%A2%E9%87%8D%E6%96%B0%E5%BC%80%E5%BC%A0%E4%BA%86/</link>
         <pubDate>Tue, 28 Mar 2023 23:28:30 +0800</pubDate>
