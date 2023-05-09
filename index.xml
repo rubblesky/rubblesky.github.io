@@ -6,7 +6,18 @@
         <description>Recent content on 瓦砾与天空</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-CN</language>
-        <lastBuildDate>Sat, 22 Apr 2023 22:00:41 +0800</lastBuildDate><atom:link href="https://rubsky.top/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 09 May 2023 16:33:00 +0800</lastBuildDate><atom:link href="https://rubsky.top/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>唤神术士</title>
+        <link>https://rubsky.top/post/%E5%94%A4%E7%A5%9E%E6%9C%AF%E5%A3%AB/</link>
+        <pubDate>Tue, 09 May 2023 16:33:00 +0800</pubDate>
+        
+        <guid>https://rubsky.top/post/%E5%94%A4%E7%A5%9E%E6%9C%AF%E5%A3%AB/</guid>
+        <description>&lt;p&gt;以前搞深度学习的都自称炼丹的，因为模型可解释性弱，所以训练一个好模型需要一些选项。现在有了大模型，它的智能水平显然不会是凡人炼丹就能得到的。科学家把这种现象称之为“涌现”，也就是当模型规模大到一定程度时，出现的前所未有的智能。&lt;/p&gt;
+&lt;p&gt;相比于炼丹，我更愿意把训练大模型的过程称之为“唤神”。也就是大模型的智能并不来自于模型本身，而在于模型中寄宿的神灵。所谓的模型训练，更像是一种宗教仪式。以大参数模型为容器，数据为祭品，训练过程为唤神仪式，而实施的将神投影到容器中的仪式。所以训练大模型的人也可以被叫做唤神术士，或是祭司。&lt;/p&gt;
+&lt;p&gt;What hath God wrought?&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>关于计划</title>
         <link>https://rubsky.top/post/%E5%85%B3%E4%BA%8E%E8%AE%A1%E5%88%92/</link>
         <pubDate>Sat, 22 Apr 2023 22:00:41 +0800</pubDate>
