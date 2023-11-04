@@ -6,7 +6,21 @@
         <description>Recent content in Posts on 瓦砾与天空</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-CN</language>
-        <lastBuildDate>Wed, 27 Sep 2023 20:55:32 +0800</lastBuildDate><atom:link href="https://rubsky.top/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 04 Nov 2023 10:30:23 +0800</lastBuildDate><atom:link href="https://rubsky.top/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>C语言生命错误（未声明）导致函数返回值阶段</title>
+        <link>https://rubsky.top/post/c%E8%AF%AD%E8%A8%80%E7%94%9F%E5%91%BD%E9%94%99%E8%AF%AF%E6%9C%AA%E5%A3%B0%E6%98%8E%E5%AF%BC%E8%87%B4%E5%87%BD%E6%95%B0%E8%BF%94%E5%9B%9E%E5%80%BC%E9%98%B6%E6%AE%B5/</link>
+        <pubDate>Sat, 04 Nov 2023 10:30:23 +0800</pubDate>
+        
+        <guid>https://rubsky.top/post/c%E8%AF%AD%E8%A8%80%E7%94%9F%E5%91%BD%E9%94%99%E8%AF%AF%E6%9C%AA%E5%A3%B0%E6%98%8E%E5%AF%BC%E8%87%B4%E5%87%BD%E6%95%B0%E8%BF%94%E5%9B%9E%E5%80%BC%E9%98%B6%E6%AE%B5/</guid>
+        <description>&lt;p&gt;拿C语言开开心心写了个库，准备拿Python调用，结果始终不对，回去用C语言调用测试，果断段错误。&lt;/p&gt;
+&lt;p&gt;动态库返回一个分配的数组，主函数接收这个指针，gdb调试发现在库代码里还能正常访问，一旦返回就段错误。
+开始以为是动态库的问题，New Bing 信誓旦旦和我说动态库卸载导致内存被释放，结果我改成静态库也不行。&lt;/p&gt;
+&lt;p&gt;后来仔细比对发现返回后的指针好像被截断了，只有后四个字节，于是想到没有在头文件声明函数，于是编译器默认返回了四个字节，加上声明，问题解决。&lt;/p&gt;
+&lt;p&gt;回到Python代码，发现ctype声明时某个参数类型写错了，改正就好了。&lt;/p&gt;
+&lt;p&gt;好久没有调动态库了，有些细节都生疏了。尤其是用Python调C，没办法同时调试两个代码，就很麻烦。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>武汉</title>
         <link>https://rubsky.top/post/%E6%AD%A6%E6%B1%89/</link>
         <pubDate>Wed, 27 Sep 2023 20:55:32 +0800</pubDate>
